@@ -27,11 +27,13 @@ class Api::V1::UsersController < ApplicationController
 
   private
 
-  def user_params
-    params.permit(:name, :image, :phone, :email)
-  end
-  
-  def user
-    @user ||= User.find(params[:id])
+    def user_params
+      params.permit(:name, :image, :phone, :email)
+    end
+
+    def user
+      @user ||= User.find(params[:id])
+    end
   end
 end
+

@@ -9,8 +9,9 @@ require 'faker'
 
 9.times do |i|
     User.create(
-      name: Faker::Name.name,
+      name: "User #{i + 1}",
       email: Faker::Internet.email,
       phone: Faker::PhoneNumber.phone_number
     )
-  end
+    
+end
